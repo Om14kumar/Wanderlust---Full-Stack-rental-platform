@@ -1,0 +1,34 @@
+<% if(success && success.length) { %>
+<br />
+<div
+  class="alert alert-success alert-dismissible fade show col-4 offset-4"
+  role="alert"
+>
+  <%= success %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
+
+<!-- 
+success exists as empty array if nothing is in success, so we should also check for success.length -->
+
+<% if(error && error.length) { %>
+<br />
+<div
+  class="alert alert-danger alert-dismissible fade show col-4 offset-4"
+  role="alert"
+>
+  <%= error %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
